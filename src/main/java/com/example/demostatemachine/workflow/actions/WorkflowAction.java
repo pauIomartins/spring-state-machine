@@ -13,16 +13,22 @@ public class WorkflowAction {
 
     @Bean
     public Action<TaskStates, TaskEvents> executeAddressFromScanned() {
-        return context -> log.info("Doing address from scanned action. Event: " + context.getEvent());
+        return (context) -> {
+            log.info("Doing address from scanned action. Event: " + context.getEvent());
+        };
     }
 
     @Bean
     public Action<TaskStates, TaskEvents> executeInventoryScanned() {
-        return context -> log.info("Doing inventory scanned action. Event: " + context.getEvent());
+        return (context) -> {
+            log.info("Doing inventory scanned action. Event: " + context.getEvent());
+        };
     }
 
     @Bean
     public Action<TaskStates, TaskEvents> executeAddressToScanned() {
-        return context -> log.info("Doing address to scanned action. Event: " + context.getEvent());
+        return (context) -> {
+            log.info("Doing address to scanned action. Event: " + context.getEvent());
+        };
     }
 }

@@ -13,7 +13,7 @@ public class InMemoryPersist implements StateMachinePersist<TaskStates, TaskEven
     private final Map<String, StateMachineContext<TaskStates, TaskEvents>> storage = new HashMap<>();
 
     @Override
-    public void write(final StateMachineContext<TaskStates, TaskEvents> context, String contextObj) {
+    public void write(final StateMachineContext<TaskStates, TaskEvents> context, final String contextObj) {
         storage.put(contextObj, context);
     }
 

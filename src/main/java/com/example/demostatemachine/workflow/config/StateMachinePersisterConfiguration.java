@@ -33,7 +33,7 @@ public class StateMachinePersisterConfiguration {
     @Profile("!test")
     @Bean
     public StateMachineRuntimePersister<TaskStates, TaskEvents, String> stateMachineRuntimePersister(
-            JpaStateMachineRepository jpaStateMachineRepository) {
+            final JpaStateMachineRepository jpaStateMachineRepository) {
         return new JpaPersistingStateMachineInterceptor<TaskStates, TaskEvents, String>(jpaStateMachineRepository);
     }
 }

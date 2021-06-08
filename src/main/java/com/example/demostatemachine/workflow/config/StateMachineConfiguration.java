@@ -5,6 +5,7 @@ import com.example.demostatemachine.workflow.TaskStates;
 import com.example.demostatemachine.workflow.config.listener.StateMachineListener;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.statemachine.action.Action;
 import org.springframework.statemachine.config.EnableStateMachineFactory;
